@@ -22,32 +22,20 @@
   ];
 
   const addTodo = (addText) => {
-    console.log('addTodo', addText);
-    /* 代入する判定が大事 */
-    // todos.push({
-    //   id: new Date(),
-    //   text: addText,
-    //   completed: false,
-    // });
-    todos[0].text = 'qaaaaa';
-    todos = todos;
-    // todos = [
-    //   ...todos,
-    //   {
-    //     id: new Date(),
-    //     text: addText,
-    //     completed: false,
-    //   },
-    // ];
+    /* 代入する判定で再レンダリングされる？ */
+    todos = [
+      ...todos,
+      {
+        id: new Date(),
+        text: addText,
+        completed: false,
+      },
+    ];
   };
 
   const removeTodo = (id) => {
-    console.log(todos);
-
-    console.log('removeTodo', id);
     todos = todos.filter((todo) => todo.id !== id);
   };
-  console.log('app render');
 </script>
 
 <main>

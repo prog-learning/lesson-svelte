@@ -1,7 +1,6 @@
 <script>
   export let todo;
   export let removeTodo;
-  console.log('item render');
 </script>
 
 <li>
